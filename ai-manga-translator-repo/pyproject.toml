@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-manga-translator"
+version = "0.1.0"
+description = "Official Python client and CLI for AI Manga Translator"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "AI Manga Translator Team", email = "support@aimangatranslation.com" }
+]
+keywords = ["manga", "translation", "ocr", "manhwa", "webtoon", "comic"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Graphics",
+]
+dependencies = [
+    "requests>=2.28.0",
+]
+
+[project.optional-dependencies]
+cli = [
+    "tqdm>=4.65.0",
+]
+
+[project.scripts]
+manga-translate = "ai_manga_translator.cli:main"
+
+[project.urls]
+Homepage = "https://aimangatranslation.com"
+Documentation = "https://aimangatranslation.com/blog"
+Repository = "https://github.com/AlenFlyer/ai-manga-translator-official"
